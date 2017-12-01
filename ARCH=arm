@@ -1,0 +1,12 @@
+  GEN     /home/nik-kst/Android/kernel/kernel-3.10_47/out/Makefile
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.hash.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.tab.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf --silentoldconfig Kconfig
+/home/nik-kst/Android/kernel/kernel-3.10_47/scripts/kconfig/Makefile:36: ошибка выполнения рецепта для цели «silentoldconfig»
+/home/nik-kst/Android/kernel/kernel-3.10_47/Makefile:505: ошибка выполнения рецепта для цели «silentoldconfig»
+Makefile:130: ошибка выполнения рецепта для цели «sub-make»
