@@ -1,0 +1,17 @@
+cd ~/Android/kernel/zc500tg_3.10
+rm -rf ~/Android/kernel/zc500tg_3.10/out
+mkdir ~/Android/kernel/zc500tg_3.10/out
+export ARCH=arm
+export SUBARCH=arm
+export CROSS_COMPILE=/home/nik-kst/Android/utility/arm-eabi-4.8/bin/arm-eabi-
+make dep
+make clean
+make mrproper
+make distclean
+make O=out TARGET_ARCH=arm hq6580_we_b1a_l_defconfig
+make -j4 O=out TARGET_ARCH=arm | tee build.log
+
+make -j1 O=out TARGET_ARCH=arm | tee build.log
+
+find . -name '*.*' | xargs grep -l 'ЧтоИскать'
+grep -iRI "ЧтоИскать" ГдеИскать
